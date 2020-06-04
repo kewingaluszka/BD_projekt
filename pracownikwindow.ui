@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PracownikWindow</class>
+ <widget class="QMainWindow" name="PracownikWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1227</width>
+    <height>817</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>70</y>
+      <width>1141</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <widget class="QWidget" name="zlecenia">
+     <attribute name="title">
+      <string>Zlecenia</string>
+     </attribute>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>210</y>
+        <width>601</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Wyszukanie calego zlecenia po numerze,kliencie, dodanie nowego zlecenia i edycja starego</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Wyszukiwanie zlecenia </string>
+      </property>
+      <widget class="QLineEdit" name="line_zlecenie">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>30</y>
+         <width>91</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Identyfikator zlecenia</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="szukaj_zlecenie">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>30</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Szukaj</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="line_klient">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>60</y>
+         <width>91</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>60</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Identyfikator klienta</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="wyswietl_wszystkie">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>90</y>
+         <width>231</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wyswietl wszystkie zlecenia</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTableView" name="tableView_zlecenia">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>520</y>
+        <width>1051</width>
+        <height>101</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>480</y>
+        <width>281</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Efekty wyszukiwania</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>250</y>
+        <width>581</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dodanie klienta i dokumenu uslugi, chyba ze sie nie zmiesci to w kliencie daj tworzenie klienta</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>60</y>
+        <width>541</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>nie dziala &quot;WHERE a=bla OR b=bla2&quot; - musisz ogarnac jak tu robi OR w kwerendzie</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="klienci">
+     <attribute name="title">
+      <string>Klienci</string>
+     </attribute>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>410</y>
+        <width>571</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>tylko wyszukanie klienta po numerze(+ zeby dane z tabeli &quot;osoba&quot; sie przy nim wyswietlily</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>341</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Wyszukiwanie zlecenia </string>
+      </property>
+      <widget class="QPushButton" name="szukaj_klienta">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>30</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Szukaj</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="line_klient_2">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>30</y>
+         <width>91</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Identyfikator klienta</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="wyswietl_wszystkich_klientow">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>231</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wyswietl wszystkich klientow</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>490</y>
+        <width>281</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Efekty wyszukiwania</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView_klienci">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>530</y>
+        <width>1051</width>
+        <height>101</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pracownicy">
+     <attribute name="title">
+      <string>Pracownicy</string>
+     </attribute>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>570</y>
+        <width>531</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dodanie, zmiana danych w pracowniku i wyswietlenie listy calej badz po numerze</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>600</y>
+        <width>571</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ALE TO W SERWISIE A NIE W PRACOWNIKU XDD, tu zostaje napis ze niedostepne</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>150</y>
+        <width>811</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Dane niedostepne. Skontaktuj sie z administratorem.</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="uslugi">
+     <attribute name="title">
+      <string>Uslugi</string>
+     </attribute>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>240</y>
+        <width>581</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dodanie, uslugi, zmiana danych w usludze i wyswietlenie listy calej badz po numerze</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="elementy">
+     <attribute name="title">
+      <string>Elementy</string>
+     </attribute>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>200</y>
+        <width>971</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dodanie elementu, zmiana danych w elemencie i wyswietlenie listy calej badz po numerze (to zostaw na koniec najlepiej, bo to najmniej przydatna funkcja</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Konto pracownika</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zakoncz_button">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>20</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zakoncz</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1227</width>
+     <height>19</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
