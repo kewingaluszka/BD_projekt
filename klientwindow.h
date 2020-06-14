@@ -25,6 +25,11 @@ private slots:
     void on_szukaj_klient_clicked();
     void on_zakoncz_button_clicked();
 
+
+    void on_tableView_clicked(const QModelIndex &index);
+
+    void on_szukaj_zlecenie_2_clicked();
+
 private:
     Ui::KlientWindow *ui;
     // QSqlDatabase db_klient = QSqlDatabase::addDatabase("QMYSQL");

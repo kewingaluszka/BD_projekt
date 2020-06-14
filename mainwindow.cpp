@@ -10,8 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
    // ui->line_login->setText("wpisz login");
    // ui->line_haslo->setText("haslo");
-    ui->line_login->setText("pracownik");
-    ui->line_haslo->setText("pracownik1");
+    ui->line_login->setText("klient");
+    ui->line_haslo->setText("klient1");
     setWindowTitle(tr("Logowanie"));
 
 }
@@ -62,8 +62,8 @@ void MainWindow::on_zaloguj_button_clicked()
     if(db.open())
     {
 
-        statusBar()->showMessage("Pomyślnie połączono z bazą danych");
-        ui->status_label->setText("Status polaczenia: połączono");
+        statusBar()->showMessage("Pomyslnie polaczono z baza danych");
+        ui->status_label->setText("Status polaczenia: polaczono");
 
         //****************************** OKNO KLIENTA *****************************************
         if(login == "klient")
@@ -88,7 +88,7 @@ void MainWindow::on_zaloguj_button_clicked()
 
     else
     {
-        statusBar()->showMessage("Błąd! Nie połączono z bazą danych");
+        statusBar()->showMessage("Blad! Nie polaczono z baza danych");
         ui->status_label->setText("Status polaczenia: nie polaczono");
     }
 }
