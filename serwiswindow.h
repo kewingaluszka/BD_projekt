@@ -73,6 +73,8 @@ private slots:
 
     void on_aktualizuj_pracownika_clicked();
 
+    void on_usun_button_clicked();
+
 private:
     Ui::SerwisWindow *ui;
 };

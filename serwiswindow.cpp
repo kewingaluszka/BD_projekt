@@ -522,3 +522,16 @@ element.bindValue(":id_urz", ui->idosoby->text());
     element.exec();
     querymodel-> setQuery(element);
 }
+
+void SerwisWindow::on_usun_button_clicked()
+{
+    QSqlQuery element;
+    QSqlQueryModel *querymodel = new QSqlQueryModel();
+    int a = (ui->usun_line->text()).toInt();
+
+
+    element.prepare("DELETE FROM zlecenia WHERE zlecenia.ID_ZLECENIA=:id_z");
+    element.bindValue(":id_z", a);
+    element.exec();
+    querymodel-> setQuery(element);
+}

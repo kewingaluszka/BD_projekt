@@ -67,6 +67,8 @@ private slots:
 
     void on_tableView_zlecenia_activated(const QModelIndex &index);
 
+    void on_usun_button_clicked();
+
 private:
     Ui::PracownikWindow *ui;
 };

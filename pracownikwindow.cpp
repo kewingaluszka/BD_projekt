@@ -443,3 +443,16 @@ void PracownikWindow::on_tableView_zlecenia_activated(const QModelIndex &index)
 //    //qDebug() << cellText;
 //    ui->klient ->setText();
 }
+
+void PracownikWindow::on_usun_button_clicked()
+{
+    QSqlQuery element;
+    QSqlQueryModel *querymodel = new QSqlQueryModel();
+    int a = (ui->usun_line->text()).toInt();
+
+
+    element.prepare("DELETE FROM zlecenia WHERE zlecenia.ID_ZLECENIA=:id_z");
+    element.bindValue(":id_z", a);
+    element.exec();
+    querymodel-> setQuery(element);
+}
